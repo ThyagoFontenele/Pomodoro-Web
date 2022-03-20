@@ -1,30 +1,21 @@
-import { useState, useEffect, useRef } from 'react';
+
+import { AppContainer } from './AppStyle';
+import { Display } from './components/Display';
+import { Header } from './components/Header';
+
+
+import { useContext } from 'react';
+import {GlobalContext} from './Context/GlobalContext';
 
 function App() {
-  const [totalSeconds, setTotalSeconds] = useState(60 * 25);
-
-  const [minutes, setMinutes] = useState(Math.floor(totalSeconds / 60))
-  const [seconds, setSeconds] = useState(totalSeconds % 60);
-  const [toggleStart, setToggleStart] = useState(false);
-
-  const timeout = useRef();
   
-  useEffect(() => {
-    clearTimeout(timeout.current);
-    if(toggleStart){
-      timeout.current = setTimeout(()=>{
-        setTotalSeconds(state => state - 1);
-        setMinutes(Math.floor(totalSeconds / 60));
-        setSeconds(totalSeconds % 60);
-      }, 1000)
-    }
-  }, [totalSeconds, toggleStart])
+  const {type} = useContext(GlobalContext);
 
   return (
-    <div className="App">
-      <span>{String(minutes).padStart(2, "0")}:{String(seconds).padStart(2, "0")}</span>
-      <button onClick={() => setToggleStart(state => !state)}>{toggleStart ? 'Stop' : 'Start'}</button>
-    </div>
+      <AppContainer type={type}>
+        <Header />
+        <Display/>
+      </AppContainer>
   );
 }
 
