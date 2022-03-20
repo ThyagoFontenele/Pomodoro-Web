@@ -43,7 +43,7 @@ export function Display(){
         }
       }, 1000)
     }
-  }, [totalSeconds, toggleStart])
+  }, [totalSeconds, toggleStart, countPomodoro, type, setType])
 
   useEffect(() => {
     setMinutes(Math.floor(totalSeconds / 60));
@@ -51,24 +51,24 @@ export function Display(){
   }, [totalSeconds])
     
     useEffect(() => {
-        switch(type){
-            case 1:
-                setToggleStart(false);
-                setTotalSeconds(workTime);
-                setType(1); 
-            break;
-            case 2:
-                setToggleStart(false);
-                setTotalSeconds(breakTime); 
-                setType(2); 
-            break;
-            case 3:
-                setToggleStart(false);
-                setTotalSeconds(longBreakTime); 
-                setType(3); 
-            break;
-        }
-    }, [type])
+      switch(type){
+        case 1:
+          setToggleStart(false);
+          setTotalSeconds(workTime);
+          setType(1); 
+        break;
+        case 2:
+          setToggleStart(false);
+          setTotalSeconds(breakTime); 
+          setType(2); 
+        break;
+        default:
+          setToggleStart(false);
+          setTotalSeconds(longBreakTime); 
+          setType(3); 
+        break;
+      }
+    }, [type, breakTime, longBreakTime, setType, workTime])
 
     return(
         <Container isActive={toggleStart} type={type}>
