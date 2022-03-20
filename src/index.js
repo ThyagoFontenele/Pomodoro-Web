@@ -6,9 +6,7 @@ import { Provider } from './Context/GlobalContext';
 
 ReactDOM.render(
   <Provider>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
+    <App />
   </Provider>,
   document.getElementById('root')
 );
