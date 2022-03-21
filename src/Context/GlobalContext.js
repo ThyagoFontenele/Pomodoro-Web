@@ -3,7 +3,7 @@ import { createContext, useState } from 'react';
 
 export const GlobalContext = createContext();
 
-export function Provider({children}){
+export function GlobalProvider({children}){
 
     const [type, setType] = useState(1);
     

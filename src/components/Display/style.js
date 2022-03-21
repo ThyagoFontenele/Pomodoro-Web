@@ -13,7 +13,7 @@ export const Container = styled.div`
     justify-content: center;
     gap: 40px 20px;
     padding: 20px;
-    margin: 0px auto;
+    margin: 0px 20px;
     max-width: 500px;
 
     ul{
@@ -88,12 +88,15 @@ export const Container = styled.div`
             position: absolute;
             right: 30px;
             top: 15px;
-            animation: tick 1s linear infinite;
+            animation: tick 1.4s linear infinite;
         }
         @keyframes tick {
             from{
                 transform: rotate(360deg);
             }
         }
+    }
+
+    @media (max-width: 430px) {
     }
 `;
