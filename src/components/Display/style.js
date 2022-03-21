@@ -11,10 +11,10 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 40px 20px;
+    gap: 40px;
     padding: 20px;
     margin: 0px 20px;
-    max-width: 500px;
+    max-width: 600px;
 
     ul{
         display: flex;
@@ -22,7 +22,7 @@ export const Container = styled.div`
         li{
             color: white;
             font-weight: 600;
-            font-size: 15px;
+            font-size: 18px;
             font-family: Arial, Helvetica, sans-serif;
             cursor: pointer;
             padding: 5px 10px;
@@ -33,7 +33,7 @@ export const Container = styled.div`
         }
     }
     span{
-        font-size: 4rem;
+        font-size: 4.5rem;
         font-weight: bold;
         font-family: Arial, Helvetica, sans-serif;
         color: #fff;
@@ -42,7 +42,7 @@ export const Container = styled.div`
         padding: 10px 0;
         width: 180px;
         cursor: pointer;
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         border: none;
         border-radius: 2px;
         color: ${ props =>{
@@ -84,10 +84,10 @@ export const Container = styled.div`
                     return '3px solid rgb(69, 124, 163)';
                 }
             }};
-            border-top-color: #e2e2e2;
+            border-top-color: ${props => props.type === 1 ? '#2EAE02' : '#e4e4e4'};
             position: absolute;
             right: 30px;
-            top: 15px;
+            top: 16px;
             animation: ${props => props.isActive ? 'tick 1s infinite' : 'none'};
         }
         @keyframes tick {
