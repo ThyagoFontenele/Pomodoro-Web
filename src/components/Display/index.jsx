@@ -33,12 +33,10 @@ export function Display(){
           audioAlarme.current.play();
           setToggleStart(false);
           if(type === 1 && countPomodoro < 4){
-            alert('Decanse.');
             setCountPomodoro(state => state + 1);
             setType(2); 
           }
           else if(type === 1 && countPomodoro === 4){
-            alert('Decanse.');
             setCountPomodoro(1);
             setType(3);
           }

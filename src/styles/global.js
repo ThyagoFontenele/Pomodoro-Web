@@ -34,6 +34,7 @@ export const GlobalStyle = createGlobalStyle`
         padding: 2rem 1rem;
         position: relative;
         border-radius: 5px;
+        margin: 0 10px;
         outline: none;
     }
     .react-modal-overlay{

@@ -97,6 +97,16 @@ export const Container = styled.div`
         }
     }
 
-    @media (max-width: 430px) {
+    @media (max-width: 470px) {
+        box-shadow: none;
+        width: 100%;
+        border-radius: 0;
+        padding: 20px 0;
+        ul{
+            gap: 5px;
+            li{
+                font-size: 14px;
+            }
+        }
     }
 `;

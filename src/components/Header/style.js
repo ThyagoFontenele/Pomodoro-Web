@@ -50,8 +50,16 @@ export const Container = styled.header`
                     background-color: rgba(255,255,255, 0.3);
                 }
             }
-    }
+        }
     }
 
+    @media (max-width: 470px){
+        div{
+            padding: 0 20px;
+            p{
+                font-size: 16px;
+            }
+        }
+    }
   
 `;
