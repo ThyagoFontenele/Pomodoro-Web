@@ -5,11 +5,11 @@ import { GlobalContext } from "../../Context/GlobalContext";
 
 export function Display(){
 
-  const {type,setType} = useContext(GlobalContext);
+  const {type,setType, pomodoroMinutes, breakMinutes, longBreakMinutes} = useContext(GlobalContext);
 
-  const workTime = 60 * 25;
-  const breakTime = 60 * 5;
-  const longBreakTime = 60 * 15;
+  const workTime = 60 * pomodoroMinutes;
+  const breakTime = 60 * breakMinutes;
+  const longBreakTime = 60 * longBreakMinutes;
 
   const [totalSeconds, setTotalSeconds] = useState(workTime);
   const [minutes, setMinutes] = useState(0)
@@ -30,10 +30,12 @@ export function Display(){
         else{
           setToggleStart(false);
           if(type === 1 && countPomodoro < 4){
+            alert('Decanse.');
             setCountPomodoro(state => state + 1);
             setType(2); 
           }
           else if(type === 1 && countPomodoro === 4){
+            alert('Decanse.');
             setCountPomodoro(1);
             setType(3);
           }

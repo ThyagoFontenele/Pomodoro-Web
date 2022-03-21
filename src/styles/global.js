@@ -34,6 +34,7 @@ export const GlobalStyle = createGlobalStyle`
         padding: 2rem 1rem;
         position: relative;
         border-radius: 5px;
+        outline: none;
     }
     .react-modal-overlay{
         background-color: rgba(0, 0, 0, 0.5);

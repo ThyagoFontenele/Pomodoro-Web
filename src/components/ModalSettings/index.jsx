@@ -2,9 +2,27 @@ import Modal from "react-modal";
 import {useContext} from 'react';
 import { ModalContext } from "../../Context/ModalContext";
 import { Container } from "./styled";
-
+import { GlobalContext } from "../../Context/GlobalContext";
 export function ModalSettings(){
     const {settingModalOpen, setSettingModalOpen} = useContext(ModalContext)
+
+    const {pomodoroMinutes, setPomodoroMinutes} = useContext(GlobalContext);
+    const {breakMinutes, setBreakMinutes} = useContext(GlobalContext);
+    const {longBreakMinutes, setLongBreakMinutes} = useContext(GlobalContext);
+
+
+    function setMinutes(value, callback){
+        if(value > 60){
+            alert('O valor não pode ser maior que 60.');
+        }
+        else if(value < 0){
+            alert('O valor não pode ser menor que 0.');
+        }
+        else{
+            callback(value);
+        }
+    }
+
     return(
         <Modal
         isOpen={settingModalOpen}
@@ -19,15 +37,15 @@ export function ModalSettings(){
                     <ul>
                         <li>
                             <label>Pomodoro</label>
-                            <input type="number" />
+                            <input type="number" name="pomodoro" value={pomodoroMinutes} onChange={(e) => setMinutes(e.target.value, setPomodoroMinutes)}/>
                         </li>
                         <li>
                             <label>Short Break</label>
-                            <input type="number" />
+                            <input type="number"name="shortBreak" value={breakMinutes} onChange={(e) => setMinutes(e.target.value, setBreakMinutes)}/>
                         </li>
                         <li>
-                            <label>Pomodoro</label>
-                            <input type="number" />
+                            <label>Long Break</label>
+                            <input type="number" value={longBreakMinutes} onChange={(e) => setMinutes(e.target.value, setLongBreakMinutes)}/>
                         </li>
                     </ul>
                 </div>
