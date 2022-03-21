@@ -84,11 +84,11 @@ export const Container = styled.div`
                     return '3px solid rgb(69, 124, 163)';
                 }
             }};
-            border-top-color: #fff;
+            border-top-color: #e2e2e2;
             position: absolute;
             right: 30px;
             top: 15px;
-            animation: tick 1.4s linear infinite;
+            animation: ${props => props.isActive ? 'tick 1s infinite' : 'none'};
         }
         @keyframes tick {
             from{

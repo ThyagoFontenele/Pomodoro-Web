@@ -11,7 +11,7 @@ export const GlobalStyle = createGlobalStyle`
         -webkit-font-smoothing: antialiased;
         background-color: ${props => {
         if(props.type === 1  ){
-            return 'rgba(239, 14, 14, 0.7)';
+            return 'rgba(189, 14, 14, 0.7)';
         }
         else if(props.type === 2){
             return 'rgb(76, 145, 149)';
