@@ -15,13 +15,12 @@ export function MusicContainer(){
 ; 
     return(
         <Container>
-         
- 
             <div className="scopo">
-                <ReactPlayer 
+                <ReactPlayer ariaHideApp={false} 
                     url={userUrls.length > 0 ? userUrls : url}
                     playing={true}
                     controls={true}
+                    volume="1"
                     width="100%"
                     height="100%"
                     style={styleReactPlayer}

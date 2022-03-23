@@ -2,8 +2,12 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     display: flex;
+    background-color: #e3e3e3;
+    width: 100%;
+    height: 600px;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     form{
         display: flex;
         input{

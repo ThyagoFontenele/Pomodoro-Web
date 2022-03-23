@@ -12,8 +12,8 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     gap: 40px;
-    padding: 20px;
-    margin: 0px 20px;
+    padding: 20px 40px;
+    margin: 40px 20px;
     max-width: 600px;
 
     ul{

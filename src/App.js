@@ -9,6 +9,7 @@ import { ModalSettings } from './components/ModalSettings';
 import { ModalProvider } from './Context/ModalContext';
 import { GlobalStyle } from './styles/global';
 import { MusicContainer } from './components/MusicContainer';
+import { Footer } from './components/Footer';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Header />
         <Display/>
         <MusicContainer/>
+        <Footer/>
         <GlobalStyle type={type}/>
       </AppContainer>
 
