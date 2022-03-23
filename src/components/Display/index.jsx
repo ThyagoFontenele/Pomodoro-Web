@@ -1,6 +1,5 @@
 import { Container } from "./style";
 import { useState, useEffect, useRef, useContext } from 'react';
-
 import { GlobalContext } from "../../Context/GlobalContext";
 import alarme from '../../assets/alarme.mp3'
 import botaosom from '../../assets/botaosom.mp3'

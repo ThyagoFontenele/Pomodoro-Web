@@ -13,7 +13,7 @@ export function Header(){
                 <ul>
                     <li onClick={() => setSettingModalOpen(true)}>
                         <img src="https://pomofocus.io/icons/config-white.png" alt="setting" />
-                        Setting
+                        Settings
                     </li>
                 </ul>
             </div>

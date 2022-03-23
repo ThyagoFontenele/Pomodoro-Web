@@ -8,6 +8,8 @@ import {GlobalContext} from './Context/GlobalContext';
 import { ModalSettings } from './components/ModalSettings';
 import { ModalProvider } from './Context/ModalContext';
 import { GlobalStyle } from './styles/global';
+import { MusicContainer } from './components/MusicContainer';
+
 
 function App() {
   
@@ -20,6 +22,7 @@ function App() {
         <ModalSettings />
         <Header />
         <Display/>
+        <MusicContainer/>
         <GlobalStyle type={type}/>
       </AppContainer>
 
