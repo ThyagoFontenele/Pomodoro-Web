@@ -15,6 +15,8 @@ export function MusicContainer(){
 ; 
     return(
         <Container>
+            <h1>Music</h1>
+            <p>Listen to relaxing music while you work, you can add your music in settings.</p>
             <div className="scopo">
                 <ReactPlayer ariaHideApp={false} 
                     url={userUrls.length > 0 ? userUrls : url}

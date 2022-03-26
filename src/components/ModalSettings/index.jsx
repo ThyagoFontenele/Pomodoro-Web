@@ -13,10 +13,10 @@ export function ModalSettings(){
 
     function setMinutes(value, callback){
         if(value > 60){
-            setAlertStatus('ERRO: O valor não pode ser maior que 60.');
+            setAlertStatus('ERRO: The value cant be bigger than 60.');
         }
         else if(value < 0){
-            setAlertStatus('ERRO: O valor não pode ser menor que 0.');
+            setAlertStatus('ERRO: The value cant be less than 0.');
         }
         else{
             callback(value);
@@ -30,11 +30,11 @@ export function ModalSettings(){
         e.preventDefault();
         
         if(input.current.value.includes('youtu')){
-            setUserUrls([...userUrls, input.current.value]);
+            setUserUrls([input.current.value,...userUrls]);
             input.current.value = '';
             setAlertStatus('');
         }else{
-            setAlertStatus('ERRO: Adicione links do youtube.');
+            setAlertStatus('ERRO: Sorry, only links from youtube.');
         }
        
     }
@@ -48,7 +48,7 @@ export function ModalSettings(){
         >
             <Container>
                 <h1>SETTINGS</h1>
-                
+                <button onClick={() => setSettingModalOpen(false)} className="close">X</button>
                 <div>
                     <h2>Time setting (minutes)</h2>
                     <ul>
@@ -67,10 +67,10 @@ export function ModalSettings(){
                     </ul>
                     <h2>Playlist setting (urls)</h2>
                     <div>
-                        <input type="text" ref={input} placeholder="Adicione as urls." />
-                        <button onClick={(e) => addMusic(e)}>Adicionar música</button>
-                        <button onClick={() => setUserUrls([])}>Remover músicas</button>
-                        <span>{userUrls.length} música{userUrls.length === 1 ? '' : 's'} na playlist.</span>
+                        <input type="text" ref={input} placeholder="Add urls from youtube." />
+                        <button onClick={(e) => addMusic(e)}>Add Song</button>
+                        <button onClick={() => setUserUrls([])}>Clear playlist</button>
+                        <span>{userUrls.length} song{userUrls.length === 1 ? '' : 's'} in the queue.</span>
                     </div>
                 </div>
                 <span>{alertStatus}</span>

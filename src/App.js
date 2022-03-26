@@ -1,10 +1,10 @@
-import { AppContainer } from './AppStyle';
+import { AppContainer } from './styles/AppStyle';
 import { Display } from './components/Display';
 import { Header } from './components/Header';
 
 
 import { useContext } from 'react';
-import {GlobalContext} from './Context/GlobalContext';
+import { GlobalContext } from './Context/GlobalContext';
 import { ModalSettings } from './components/ModalSettings';
 import { ModalProvider } from './Context/ModalContext';
 import { GlobalStyle } from './styles/global';

@@ -2,12 +2,21 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     display: flex;
-    background-color: #e3e3e3;
+    background-color: #fbfbfb;
     width: 100%;
     height: 600px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
+    h1{
+        font-family: Arial, Helvetica, sans-serif;
+        color: hsl(357, 50%, 22%);
+    }
+    p{
+        font-family: Arial, Helvetica, sans-serif;
+        color: hsl(357, 50%, 22%);
+    }
     form{
         display: flex;
         input{
@@ -39,5 +48,6 @@ export const Container = styled.div`
             width: 340px;
             height: 190px;
         }
+        height: 300px;
     }
 `;

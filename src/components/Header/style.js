@@ -3,11 +3,13 @@ import styled from 'styled-components';
 export const Container = styled.header`
     width: 100%;
     height: 70px;
-    background-color: rgba(255,255,255, 0.1);
+    background-color: rgba(255,255,255, 0.3);
     box-sizing: border-box;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
+    position: fixed;
+    z-index: 99;
     div{
         display: flex;
         margin: 0 auto;

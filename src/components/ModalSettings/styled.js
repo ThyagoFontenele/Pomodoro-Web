@@ -4,6 +4,25 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     gap: 10px;
+    position: relative;
+    .close{
+        color: #c4c4c4;
+        position: absolute;
+        right: 0;
+        top: -20px;
+        font-weight: 600;
+        font-size: 1.4rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover{
+            color: #a4a4a4;
+        }
+        border: none;
+        background: none;
+    }
+
     h1{
         font-size: 16px;
         color: #a4a4a4;
